@@ -35,6 +35,7 @@ CREATE TABLE IF NOT EXISTS telefone (
 CREATE TABLE IF NOT EXISTS voluntario (
 	id_voluntario INT PRIMARY KEY AUTO_INCREMENT,
     funcao VARCHAR(50) NOT NULL,
+    data_cadastro DATETIME NOT NULL,
     fk_usuario INT NOT NULL, CONSTRAINT usuario_voluntario FOREIGN KEY (fk_usuario) REFERENCES usuario(id_usuario)
 );
 
